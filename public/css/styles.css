@@ -1,0 +1,301 @@
+html,
+body {
+  height: 100% !important;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+.btn {
+  /* "all" covers all propertires of the button */
+  transition: all 0.3s ease-in-out;
+}
+
+.span-red {
+  color: #be2835;
+}
+
+/* Everything less than 768px */
+@media(max-width: 768px) {
+  /* Header */
+  #header {
+    text-align: center;
+  }
+
+  #header img {
+    /* 0 margin on top and bottom and automatically fill sides
+       so the image is centrally aligned */
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  #header h2 {
+    margin-bottom: 25px;
+  }
+
+  /* Social */
+  #social {
+    text-align: center;
+  }
+
+  #social hr, #who hr {
+    /* Auto on left and right will automatically center item in container */
+    margin: 8% auto;
+  }
+
+  /* Who */
+  #who {
+    text-align: center;
+  }
+
+  #who img {
+    margin-top: 15%;
+  }
+
+  /* Footer */
+  #footer {
+    text-align: center;
+  }
+
+}
+
+/* Navbar ---------- */
+.navbar {
+  /* Give navbar a slight transparency by using rgba */
+  background-color: rgba(21, 31, 33, 0.5);
+  border-bottom: 1px solid #dedede;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+/* Change color of nav bar menu items (anchor tags) */
+.navbar .nav .nav-item .nav-link {
+  color: #d1d1d1;
+}
+
+.navbar .nav .nav-item .nav-link:hover {
+  color: #fff;
+}
+
+/* Change color of menu toggler button (hamburger) */
+.navbar-toggler {
+  color: white;
+}
+
+/* Header ---------- */
+#header {
+  background: url('../img/stars-bg.jpg') center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+#header img {
+  padding: 0 0 20px;
+  width: 80%;
+}
+
+#header h2 {
+  text-transform: uppercase;
+}
+
+#header a .fa {
+  /* 5% margin to top and bottom of arrow, 0 to each side */
+  margin: 5% 0;
+  color: #fff;
+}
+
+#header a .fa:hover {
+  color: #ccc;
+}
+
+#header .header-right {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Social ----------- */
+
+#social {
+  padding: 4.25rem 0;
+}
+
+#social .fa {
+  font-size: 1.5em;
+  color: #be2835;
+  border: 2px solid #be2835;
+  width: 60px;
+  height: 60px;
+  border-radius: 30%;
+  text-align: center;
+  padding: 30% 0;
+  margin-top: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+#social .fa:hover {
+  color: #fff;
+  background-color: #be2835;
+}
+
+/* Who ----------- */
+
+#who {
+  padding: 5rem 0;
+  background-color: #f6f6f6;
+}
+
+#who .btn-who {
+  background-color: #be2835;
+  color: #fff;
+  width: 50%;
+}
+
+#who .btn-who:hover {
+  background-color: #f6f6f6;
+  color: #be2835;
+  border-color: #be2835;
+}
+
+/* Work ----------- */
+
+#work {
+  padding: 5rem 0;
+}
+
+#work .work-img {
+  /* position of relative makes the overlay only cover the image
+     instead of the entire card */
+  position: relative;
+}
+
+#work .work-img .img-overlay {
+  position: absolute;
+  /* top: 0, left: 0 sets the overlay to the top left corner of the div */
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Width and height of 100% make sure the overlay covers the
+     entire .work-img div */
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/eye.png');
+  /* 2 centers for horizontal and vertical directions */
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* opacity and z-index of 0 make the overlay invisible until a user hovers */
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#work .work-img .img-overlay:hover {
+  /* When a user hovers, the overlay becomes visible
+     by setting opacity and z-index to 1*/
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Why ----------- */
+
+#why {
+  padding: 5rem 0;
+  background-color: #f6f6f6;
+}
+
+#why .fa {
+  color: #be2835;
+  padding: 20px 0;
+}
+
+#why h3 {
+  padding-bottom: 20px;
+}
+
+/* Customers ----------- */
+
+#customers {
+  padding: 5rem 0;
+  /* Keeps the customer content from bleeding into the pricing section
+     during animation --> see fadeInUp */
+  overflow: hidden;
+}
+
+#customers p {
+  padding: 20px 0 20px;
+}
+
+#customers .carousel-indicators li {
+  background-color: #be2835;
+}
+
+#customers .carousel-inner {
+  margin-bottom: 50px;
+}
+
+#customers .carousel-indicators {
+  margin-bottom: -80px;
+}
+
+/* Pricing ----------- */
+
+#pricing {
+  padding: 5rem 0;
+  background-color: #f6f6f6;
+}
+
+#pricing p {
+  padding: 15px 0;
+}
+
+#pricing .card .card-header {
+  background-color: #6e6e6e;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+#pricing .card .card-header:hover {
+  background-color: #be2835;
+}
+
+#pricing .card .standard {
+  background-color: #be2835;
+  font-size: 1.3em;
+  padding: 15px 0;
+}
+
+/* Contact ----------- */
+
+#contact {
+  padding: 5rem 0;
+}
+
+#contact p {
+  padding: 15px 0;
+}
+
+/* Footer ----------- */
+
+#footer {
+  padding: 2rem 0;
+  background-color: #484848;
+  color: #fff;
+  overflow: hidden;
+}
+
+#footer a {
+  color: #fff;
+}
+
+#footer .fa {
+  color: #be2835;
+  padding: 0 5px;
+}
+
+#footer img {
+  margin-bottom: 20px;
+}
+
+#contact-info li {
+  padding: 12px;
+}
